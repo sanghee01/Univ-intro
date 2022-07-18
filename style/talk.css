@@ -9,11 +9,17 @@
   left: 0;
   z-index: 1000;
 }
+.talk__wrap {
+  width: 70%;
+}
 .talk__overlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
+}
+.talk__wrap {
+  z-index: 99999;
 }
 .talk__content {
   background-color: white;
@@ -21,8 +27,21 @@
   text-align: center;
   position: relative;
   border-radius: 10px;
-  width: 20%;
+  width: 70%;
   bottom: -220px;
+  margin: auto;
+}
+
+.talk__char {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.talk__char > h3 {
+  background-color: hotpink;
+  color: white;
+  padding: 10px;
 }
 .hidden {
   display: none;
