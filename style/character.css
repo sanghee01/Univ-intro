@@ -1,12 +1,45 @@
+/*고양이*/
+.cat{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
 #player {
   position: fixed;
   align-items: center;
-  top: 170px;
-  width: 70px;
-  height: 70px;
+  top: 200px;
   z-index: 999;
   transition: all 1s ease;
 }
+#player1 {
+  top: 425%;
+  right: 40%;
+  transform: scaleX(-1);
+}
+#player2 {
+  top: 625%;
+  left: 35%;
+}
+#player3 {
+  top: 845%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player4 {
+  top: 1005%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player5 {
+  top: 1285%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player6 {
+  top: 1495%;
+  left: 35%;
+}
+/*npc*/
 .npc {
   position: absolute;
   width: 100px;
@@ -37,4 +70,34 @@
   top: 1490%;
   left: 25%;
   transform: scaleX(-1);
+}
+/*느낌표*/
+.em{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+#em1{
+  top: 405%;
+  right: 30%;
+}
+#em2 {
+  top: 605%;
+  left: 25%;
+}
+#em3 {
+  top: 825%;
+  right: 25%;
+}
+#em4 {
+  top: 985%;
+  right: 25%;
+}
+#em5 {
+  top: 1265%;
+  right: 25%;
+}
+#em6 {
+  top: 1475%;
+  left: 25%;
 }
