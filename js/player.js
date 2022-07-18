@@ -18,6 +18,10 @@ const talkWrap = document.querySelectorAll(".talk__char"); // 대사 player일�
 const talkScript = document.querySelectorAll(".talk__script"); // 대사
 const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
+//link 선언 // link css
+//const ground = document.querySelectorAll(".ground");
+
+
 const dialogList = {
   0: {
     name: "미대생",
@@ -67,8 +71,8 @@ const openTalk = (npcIndex) => {
   talkNpc[npcIndex].classList.add("hidden");
   talkWrap[npcIndex].classList.add("talk__char--right");
   talk[npcIndex].classList.remove("hidden");
-  cat[npcIndex].classList.remove("catHidden");
-  player.classList.add("playerHidden");
+  cat[npcIndex].classList.remove("hidden");
+  player.classList.add("hidden");
   nextBtn[npcIndex].addEventListener("click", nextTalk);
   talkNpc[npcIndex].textContent = dialog.name; // 클릭한 npc 이름 설정
   //overlay[npcIndex].addEventListener("click", closeTalk);
@@ -103,7 +107,7 @@ const nextTalk = () => {
 // 대화창 끔
 const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
-  cat[npcIndex].classList.add("catHidden");
-  player.classList.remove("playerHidden");
-
+  cat[npcIndex].classList.add("hidden");
+  player.classList.remove("hidden");
+  //ground[npcIndex].classList.remove("hidden");
 };
