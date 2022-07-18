@@ -1,3 +1,5 @@
+window.onbeforeunload = function(){ window.scrollTo(0,0); }
+
 const player = document.querySelector("#player");
 
 const npcList = document.querySelectorAll(".npc");

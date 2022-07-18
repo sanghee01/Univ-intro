@@ -1,28 +1,40 @@
 #player {
   position: fixed;
+  align-items: center;
   top: 170px;
-  width: 60px;
-  left: 700px;
-  height: 60px;
-  transition: all 1s ease;
+  width: 70px;
+  height: 70px;
   z-index: 999;
+  transition: all 1s ease;
 }
 .npc {
   position: absolute;
-  width: 60px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
 }
 #npc1 {
-  top: 400px;
-  left: 560px;
-  transform: scaleX(-1);
+  top: 420%;
+  right: 30%;
 }
 #npc2 {
-  top: 1350px;
-  right: 550px;
+  top: 620%;
+  left: 25%;
+  transform: scaleX(-1);
 }
 #npc3 {
-  top: 2100px;
-  left: 600px;
+  top: 840%;
+  right: 25%;
+}
+#npc4 {
+  top: 1000%;
+  right: 25%;
+}
+#npc5 {
+  top: 1280%;
+  right: 25%;
+}
+#npc6 {
+  top: 1490%;
+  left: 25%;
   transform: scaleX(-1);
 }
