@@ -105,4 +105,5 @@ const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
   cat[npcIndex].classList.add("catHidden");
   player.classList.remove("playerHidden");
+
 };
