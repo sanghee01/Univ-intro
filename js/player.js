@@ -11,8 +11,12 @@ const talk = document.querySelectorAll(".talk");
 const overlay = document.querySelectorAll(".talk__overlay");
 const nextBtn = document.querySelectorAll(".nextBtn");
 const talkNpc = document.querySelectorAll(".talk__npc");
-const talkScript = document.querySelectorAll(".talk__script");
 const cat = document.querySelectorAll(".cat");
+const talkNpcName = document.querySelectorAll(".talk__npc>h3");
+const talkPlayer = document.querySelectorAll(".talk__player");
+const talkWrap = document.querySelectorAll(".talk__char"); // 대사 player일때 오른쪽 정렬하기 위해 씀
+const talkScript = document.querySelectorAll(".talk__script"); // 대사
+const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
 const dialogList = {
   0: {
@@ -59,6 +63,9 @@ let dialog = {};
 
 // hidden을 없애면서 대화창 띄움. 띄워야지 nextBtn click event를 인식함
 const openTalk = (npcIndex) => {
+  talkPlayer[npcIndex].classList.remove("hidden");
+  talkNpc[npcIndex].classList.add("hidden");
+  talkWrap[npcIndex].classList.add("talk__char--right");
   talk[npcIndex].classList.remove("hidden");
   cat[npcIndex].classList.remove("catHidden");
   player.classList.add("playerHidden");
@@ -70,10 +77,23 @@ let talkIndex = 0;
 
 // nextBtn을 누르면 대화 내용 다음꺼로 변경, 마지막 대화 넘으면 closeTalk 실행(대화창 끔)
 const nextTalk = () => {
-  console.log(dialog);
-  console.log(talkScript.textContent);
+  if (talkIndex % 2 == 0) {
+    talkPlayer[npcIndex].classList.add("hidden");
+    talkNpc[npcIndex].classList.remove("hidden");
+    talkWrap[npcIndex].classList.remove("talk__char--right");
+
+    console.log("나 짝수임");
+    console.dir(talkPlayer[npcIndex]);
+  } else {
+    talkPlayer[npcIndex].classList.remove("hidden");
+    talkWrap[npcIndex].classList.add("talk__char--right");
+    talkNpc[npcIndex].classList.add("hidden");
+    console.log("나 홀수임");
+    console.dir(talkNpc[npcIndex]);
+  }
   talkScript[npcIndex].textContent = dialog.script[talkIndex];
   talkIndex++;
+
   if (talkIndex === dialog.script.length + 1) {
     talkIndex = 0;
     talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
