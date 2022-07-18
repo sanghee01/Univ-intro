@@ -3,6 +3,9 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-image: url("../img/bg-campus.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #bg {

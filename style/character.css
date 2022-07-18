@@ -4,13 +4,13 @@
   top: 170px;
   width: 70px;
   height: 70px;
-  z-index: 999;
+  z-index: 9;
   transition: all 1s ease;
 }
 .npc {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 84px;
+  height: 116px;
 }
 #npc1 {
   top: 420%;
