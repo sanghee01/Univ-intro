@@ -1,4 +1,6 @@
-window.onbeforeunload = function(){ window.scrollTo(0,0); }
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 const player = document.querySelector("#player");
 
@@ -13,7 +15,7 @@ const nextBtn = document.querySelectorAll(".nextBtn");
 const talkNpc = document.querySelectorAll(".talk__char");
 const talkScript = document.querySelectorAll(".talk__script");
 
-const dialog = {
+const dialogList = {
   0: {
     name: "미대생",
     script: [
@@ -32,7 +34,7 @@ const dialog = {
       "고마워!",
     ],
   },
-  3: {
+  2: {
     name: "공대생",
     script: [
       "끄어어...",
@@ -42,44 +44,47 @@ const dialog = {
     ],
   },
 };
+let npcIndex = 0;
+
+// 클릭한 npc 인식 및 그 npc로 대사 설정, 대화창 띄움
+npcList.forEach((npc, index) => {
+  npc.addEventListener("click", () => {
+    dialog = dialogList[index]; // 추후 close에서 수정해야하나? 근데 실행할때마다 해서 상관업을 것 같기도
+    // console.dir(dialog);
+    npcIndex = index;
+    openTalk(npcIndex);
+  });
+});
+
+let dialog = {};
+
+// hidden을 없애면서 대화창 띄움. 띄워야지 nextBtn click event를 인식함
+const openTalk = (npcIndex) => {
+  talk[npcIndex].classList.remove("hidden");
+  nextBtn[npcIndex].addEventListener("click", nextTalk);
+  talkNpc.textContent = dialog.name; // 클릭한 npc 이름 설정
+};
 
 let talkIndex = 0;
-// const nextTalk = (npc) => {
-//   console.dir(nextTalk);
-//   console.dir(npc);
-//   talkNpc.textContent = dialog[npc].name;
-//   talkScript.textContent = dialog[npc].script[talkIndex];
-//   talkIndex++;
-//   if (talkIndex === 5) {
-//     talkIndex = 0;
-//     closeTalk();
-//   }
-// };
-const openTalk = (index) => {
-  talk[index].classList.remove("hidden");
-  console.dir(index);
 
-  nextBtn[index].addEventListener("click", (index) => {
-    // talkNpc[index].textContent = dialog[index].name;
-    // talkScript[index].textContent = dialog[index].script[talkIndex];
-    // talkIndex++;
-    // if (talkIndex === 5) {
-    //   talkIndex = 0;
-    //   closeTalk();
-    // }
-    console.dir(index);
-  });
+// nextBtn을 누르면 대화 내용 다음꺼로 변경, 마지막 대화 넘으면 closeTalk 실행(대화창 끔)
+const nextTalk = () => {
+  console.log(dialog);
+  console.log(talkScript.textContent);
+  talkScript[npcIndex].textContent = dialog.script[talkIndex];
+  talkIndex++;
+  if (talkIndex === dialog.script.length + 1) {
+    talkIndex = 0;
+    talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
+
+    closeTalk();
+  }
 };
-// const closeTalk = () => {
-//   talk.classList.add("hidden");
-// };
+
+// 대화창 끔
+const closeTalk = () => {
+  talk[npcIndex].classList.add("hidden");
+};
 
 // overlay[npcIndex].addEventListener("click", closeTalk);
 // npc[npcIndex].addEventListener("click", openTalk);
-npcList.forEach((npc, index) => {
-  npc.addEventListener("click", () => {
-    // console.log("hi" + index);
-    // console.dir(npc);
-    openTalk(index);
-  });
-});
