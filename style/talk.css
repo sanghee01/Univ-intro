@@ -1,0 +1,29 @@
+.talk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.talk__overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.talk__content {
+  background-color: white;
+  padding: 40px 100px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  width: 20%;
+  bottom: -220px;
+}
+.hidden {
+  display: none;
+}

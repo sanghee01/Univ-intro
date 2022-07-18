@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#bg {
+  height: 700%;
+  width: 700px;
+}
