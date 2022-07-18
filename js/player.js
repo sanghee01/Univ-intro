@@ -12,7 +12,7 @@ const npcList = document.querySelectorAll(".npc");
 const talk = document.querySelectorAll(".talk");
 const overlay = document.querySelectorAll(".talk__overlay");
 const nextBtn = document.querySelectorAll(".nextBtn");
-const talkNpc = document.querySelectorAll(".talk__char");
+const talkNpc = document.querySelectorAll(".talk__npc");
 const talkScript = document.querySelectorAll(".talk__script");
 
 const dialogList = {
@@ -62,7 +62,7 @@ let dialog = {};
 const openTalk = (npcIndex) => {
   talk[npcIndex].classList.remove("hidden");
   nextBtn[npcIndex].addEventListener("click", nextTalk);
-  talkNpc.textContent = dialog.name; // 클릭한 npc 이름 설정
+  talkNpc[npcIndex].textContent = dialog.name; // 클릭한 npc 이름 설정
 };
 
 let talkIndex = 0;
