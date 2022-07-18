@@ -9,65 +9,67 @@
   align-items: center;
   top: 200px;
   z-index: 999;
+  width: 70px;
+  height: 70px;
   transition: all 1s ease;
 }
 #player1 {
-  top: 425%;
+  top: 400%;
   right: 40%;
   transform: scaleX(-1);
 }
 #player2 {
-  top: 625%;
+  top: 600%;
   left: 35%;
 }
 #player3 {
-  top: 845%;
+  top: 790%;
   right: 35%;
   transform: scaleX(-1);
 }
 #player4 {
-  top: 1005%;
+  top: 960%;
   right: 35%;
   transform: scaleX(-1);
 }
 #player5 {
-  top: 1285%;
+  top: 1210%;
   right: 35%;
   transform: scaleX(-1);
 }
 #player6 {
-  top: 1495%;
+  top: 1400%;
   left: 35%;
 }
-/*npc*/
-.npc {
+/*human*/
+.human {
   position: absolute;
   width: 100px;
   height: 100px;
 }
 #npc1 {
-  top: 420%;
+  top: 395%;
   right: 30%;
 }
 #npc2 {
-  top: 620%;
+  top: 595%;
   left: 25%;
   transform: scaleX(-1);
 }
 #npc3 {
-  top: 840%;
+  top: 785%;
   right: 25%;
 }
 #npc4 {
-  top: 1000%;
+  top: 955%;
   right: 25%;
 }
 #npc5 {
-  top: 1280%;
+  top: 1205%;
   right: 25%;
 }
 #npc6 {
-  top: 1490%;
+  top: 1395%;
   left: 25%;
   transform: scaleX(-1);
 }
@@ -78,26 +80,26 @@
   height: 100px;
 }
 #em1{
-  top: 405%;
+  top: 380%;
   right: 30%;
 }
 #em2 {
-  top: 605%;
+  top: 580%;
   left: 25%;
 }
 #em3 {
-  top: 825%;
+  top: 770%;
   right: 25%;
 }
 #em4 {
-  top: 985%;
+  top: 940%;
   right: 25%;
 }
 #em5 {
-  top: 1265%;
+  top: 1190%;
   right: 25%;
 }
 #em6 {
-  top: 1475%;
+  top: 1380%;
   left: 25%;
 }

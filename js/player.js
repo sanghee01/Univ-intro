@@ -3,9 +3,7 @@ window.onbeforeunload = function () {
 };
 
 const player = document.querySelector("#player");
-
 const npcList = document.querySelectorAll(".npc");
-
 // const talk1 = document.querySelector("#talk1");
 // const talk2 = document.querySelector("#talk2");
 // const talk3 = document.querySelector("#talk3");
@@ -14,6 +12,7 @@ const overlay = document.querySelectorAll(".talk__overlay");
 const nextBtn = document.querySelectorAll(".nextBtn");
 const talkNpc = document.querySelectorAll(".talk__npc");
 const talkScript = document.querySelectorAll(".talk__script");
+const cat = document.querySelectorAll(".cat");
 
 const dialogList = {
   0: {
@@ -44,6 +43,7 @@ const dialogList = {
     ],
   },
 };
+
 let npcIndex = 0;
 
 // 클릭한 npc 인식 및 그 npc로 대사 설정, 대화창 띄움
@@ -55,16 +55,17 @@ npcList.forEach((npc, index) => {
     openTalk(npcIndex);
   });
 });
-
 let dialog = {};
 
 // hidden을 없애면서 대화창 띄움. 띄워야지 nextBtn click event를 인식함
 const openTalk = (npcIndex) => {
   talk[npcIndex].classList.remove("hidden");
+  cat[npcIndex].classList.remove("catHidden");
+  player.classList.add("playerHidden");
   nextBtn[npcIndex].addEventListener("click", nextTalk);
   talkNpc[npcIndex].textContent = dialog.name; // 클릭한 npc 이름 설정
+  //overlay[npcIndex].addEventListener("click", closeTalk);
 };
-
 let talkIndex = 0;
 
 // nextBtn을 누르면 대화 내용 다음꺼로 변경, 마지막 대화 넘으면 closeTalk 실행(대화창 끔)
@@ -76,15 +77,12 @@ const nextTalk = () => {
   if (talkIndex === dialog.script.length + 1) {
     talkIndex = 0;
     talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
-
     closeTalk();
   }
 };
-
 // 대화창 끔
 const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
+  cat[npcIndex].classList.add("catHidden");
+  player.classList.remove("playerHidden");
 };
-
-// overlay[npcIndex].addEventListener("click", closeTalk);
-// npc[npcIndex].addEventListener("click", openTalk);

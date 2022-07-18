@@ -31,18 +31,22 @@
   bottom: -220px;
   margin: auto;
 }
-
 .talk__char {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 .talk__char > h3 {
   background-color: hotpink;
   color: white;
   padding: 10px;
 }
-.hidden {
+.hidden{
+  display: none;
+}
+.catHidden{
+  display: none;
+}
+.playerHidden{
   display: none;
 }
