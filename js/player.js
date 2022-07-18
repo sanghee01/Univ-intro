@@ -56,6 +56,7 @@ let talkIndex = 0;
 const openTalk = (index) => {
   talk[index].classList.remove("hidden");
   console.dir(index);
+  console.dir(openTalk);
 
   nextBtn[index].addEventListener("click", (index) => {
     // talkNpc[index].textContent = dialog[index].name;
