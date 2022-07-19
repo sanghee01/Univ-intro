@@ -1,40 +1,107 @@
+/*고양이*/
+.cat{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
 #player {
   position: fixed;
   align-items: center;
-  top: 170px;
+  top: 200px;
+  z-index: 999;
   width: 70px;
   height: 70px;
-  z-index: 9;
+  z-index: 9; 
+  /* z-index확인 */
   transition: all 1s ease;
 }
-.npc {
+#player1 {
+  top: 400%;
+  right: 40%;
+  transform: scaleX(-1);
+}
+#player2 {
+  top: 600%;
+  left: 35%;
+}
+#player3 {
+  top: 790%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player4 {
+  top: 960%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player5 {
+  top: 1210%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player6 {
+  top: 1400%;
+  left: 35%;
+}
+/*human*/
+.human {
   position: absolute;
   width: 84px;
   height: 116px;
 }
 #npc1 {
-  top: 420%;
+  top: 395%;
   right: 30%;
 }
 #npc2 {
-  top: 620%;
+  top: 595%;
   left: 25%;
   transform: scaleX(-1);
 }
 #npc3 {
-  top: 840%;
+  top: 785%;
   right: 25%;
 }
 #npc4 {
-  top: 1000%;
+  top: 955%;
   right: 25%;
 }
 #npc5 {
-  top: 1280%;
+  top: 1205%;
   right: 25%;
 }
 #npc6 {
-  top: 1490%;
+  top: 1395%;
   left: 25%;
   transform: scaleX(-1);
+}
+/*느낌표*/
+.em{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+#em1{
+  top: 380%;
+  right: 30%;
+}
+#em2 {
+  top: 580%;
+  left: 25%;
+}
+#em3 {
+  top: 770%;
+  right: 25%;
+}
+#em4 {
+  top: 940%;
+  right: 25%;
+}
+#em5 {
+  top: 1190%;
+  right: 25%;
+}
+#em6 {
+  top: 1380%;
+  left: 25%;
 }

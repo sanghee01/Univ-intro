@@ -1,0 +1,11 @@
+.ground{
+    position: fixed;
+    align-items: center;
+    background-color : white;
+    margin-top: 100px;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
