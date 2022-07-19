@@ -22,6 +22,9 @@ const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + �
 const ground = document.querySelector(".ground");
 const groundheader = document.querySelector(".groundheader");
 const groundbody = document.querySelector(".groundbody");
+// 오디오 설정
+const audio = document.getElementById("nyaong");
+//link 선언 // link css
 
 const dialogList = {
   0: {
@@ -90,6 +93,7 @@ let npcIndex = 0;
 // 클릭한 npc 인식 및 그 npc로 대사 설정, 대화창 띄움
 npcList.forEach((npc, index) => {
   npc.addEventListener("click", () => {
+    audio.play(); // 오디오 플레이
     dialog = dialogList[index]; // 추후 close에서 수정해야하나? 근데 실행할때마다 해서 상관업을 것 같기도
     // console.dir(dialog);
     npcIndex = index;
@@ -130,13 +134,13 @@ const nextTalk = () => {
 
   if (talkIndex === dialog.script.length - 1) {
     talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
-    console.dir(groundheader);
     groundheader.href = dialogList[npcIndex].script[talkIndex];
     groundheader.style.backgroundImage = `url(${dialogList[npcIndex].img})`;
     talkIndex = 0;
     closeTalk();
   }
 };
+
 // 대화창 끔
 const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
@@ -149,3 +153,4 @@ const clicklink = () => {
   ground.classList.add("hidden");
 };
 ground.addEventListener("click", clicklink);
+//ground[npcIndex].classList.remove("hidden");

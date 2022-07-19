@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="style/talk.css" />
     <link rel="stylesheet" href="style/link.css" />
     <link rel="stylesheet" href="style/startscreen.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Nanum+Myeongjo&display=swap" rel="stylesheet"> -->
+
 
   </head>
   <body id = "scroll">
@@ -29,13 +27,20 @@
     <div id = "mapsurround"><img src="img/UniMap.png" id ="map"></div>
     <div id = "box">
       <div id = "TITLE"><h1>WKU</h1></div>
-      <button id= "startbutton">둘러보기</button>
+      <div id = "extext">"안녕! 난 원냥이야! 원광대 캠퍼스에서 살고 있어"<br>"나랑 원대탐방 해보지 않을래?"</div>
+      <div><iframe id = "video" width="560" height="315" src="https://www.youtube.com/embed/OW3kRfzk2UQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <button id= "startbutton">원광대 탐방하기</button>
     </div>
     <div id="start_overlay"></div>
  
     <!-- player -->
     <img src="img/player.gif" id="player"/> 
     <!-- 대화 시 player 이동한 사진 -->
+  
+    <audio id = nyaong src="audio/nyaong1.mp3"></audio>
+
+    <img src="img/player.gif" id="player"/>
     <img src="img/player.gif" class="cat hidden" id="player1"/>
     <img src="img/player.gif" class="cat hidden" id="player2"/>
     <img src="img/player.gif" class="cat hidden" id="player3"/>
@@ -106,7 +111,7 @@
               </div>
             </div>
             <div class="talk__content">
-              <p class="talk__script">안녕! 인문대생 이 건물은뭐하는 곳이야?</p>
+              <p class="talk__script">안녕! 인문대생 이 건물은 뭐하는 곳이야?</p>
               <div class="btn-wrap">
                 <div class="nextBtn">
                   다음
@@ -220,3 +225,12 @@
     <script src="js/map.js"></script>
   </body>
 </html>
+
+<!--출처
+    대학 본부 사진 : http://www.iksannews.com/default/index_view_page.php?part_idx=262&idx=53498
+    학생회관 : http://sjbnews.com/news/print.php?code=li_news_2020&number=683597
+    프라임관 : http://www.dailyjeonbuk.com/news/articleView.html?idxno=284097
+    수덕호 : https://commons.wikimedia.org/wiki/File:%EC%9B%90%EA%B4%91%EB%8C%80%ED%95%99%EA%B5%90_%EC%88%98%EB%8D%95%ED%98%B8%EB%B6%84%EC%88%98_%28Wonkwang_UNIV%29_-_panoramio.jpg
+    학생지원관 : https://m.place.naver.com/place/17525407/home?entry=ple
+    중앙도서관 : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=chhn2443&logNo=220661252640
+  -->

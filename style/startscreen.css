@@ -16,6 +16,7 @@
   font-size: 30px;
   font-weight: bold;
   background-color: gold;
+  color: rgb(99, 57, 46);
   border: 0;
   outline: 0;
   border-radius: 10%;
@@ -42,7 +43,10 @@
   position: fixed;
   top: 0px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 300%;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Jua", sans-serif;
+  font-family: "Nanum Myeongjo", serif;
   color: rgb(0, 0, 0);
   z-index: 99999999999999999;
 }
@@ -54,6 +58,14 @@
   float: right;
 }
 
+#video {
+  position: absolute;
+  top: 43%;
+  left: 38.3%;
+  width: 23.5%;
+  height: 30%;
+}
+
 #map {
   position: fixed;
   display: none;
@@ -62,10 +74,14 @@
   width: 300px;
   height: 300px;
   float: right;
-  z-index: 9999999999;
   border: 10px solid gold;
   border-radius: 10px;
+  z-index: 99999999999999999999;
 }
-.instar {
-  border-radius: 30px;
+
+#extext {
+  position: absolute;
+  top: 37%;
+  left: 41%;
+  font-weight: bold;
 }
