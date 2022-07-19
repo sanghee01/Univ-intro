@@ -1,8 +1,12 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("../img/bg-campus.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #bg {
