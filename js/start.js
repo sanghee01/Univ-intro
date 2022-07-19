@@ -11,14 +11,18 @@ const clickbutton = () => {
   box.style.display = "none";
   startButton.style.display = "none";
   start_overlay.style.display = "none";
+  const upside = document.getElementById("upside");
+  const backmusic = document.getElementById("bgm");
 
   map.style.display = "block";
   player_image.style.display = "block";
   upside.style.display = "block";
+  backmusic.style.display = "block";
   //스크롤바 보이게 하기
   scrolling.style.overflow = "visible";
-  scrollTo({ left: 0, top: 1405, behavior: "smooth" });
+  scrollTo({ left: 0, top: 1935, behavior: "smooth" });
   //원하는위치까지 스크롤
+  backmusic.play();
 };
 
 startButton.addEventListener("click", clickbutton);
