@@ -1,7 +1,6 @@
 .ground {
   position: fixed;
   align-items: center;
-  background-color: transparent;
   margin-top: 100px;
   width: 800px;
   height: 500px;
@@ -9,22 +8,25 @@
   display: flex;
   flex-direction: column;
 }
-.groundheader {
-  background-color: white;
-  width: 600px;
-  height: 100px;
-  color: black;
-  border-radius: 20px;
-  margin-top: 110px;
-  line-height: 60px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none; /*밑줄*/
+.textBox {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   font-weight: bold;
   font-size: 130%;
+  cursor: pointer;
+  line-height: 100px;
+}
+.groundheader {
+  width: 600px;
+  height: 100px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 110px;
+  text-align: center;
   background-image: url();
   background-repeat: no-repeat;
   background-size: 100%;
+  text-decoration: none; /*밑줄*/
 }
 .groundbody {
   background-color: white;
