@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   background-image: url("../img/bg-campus.png");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /*배경 하나로 */
   background-size: 100%;
 }
 
