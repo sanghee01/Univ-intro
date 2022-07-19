@@ -36,6 +36,8 @@
   overflow: hidden;
 }
 
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
 #upside {
   background-color: rgba(255, 255, 255, 0.6);
   display: none;
@@ -45,9 +47,7 @@
   top: 0px;
   font-size: 40px;
   font-weight: 300%;
-  font-family: 'Gamja Flower', cursive;
-  font-family: 'Jua', sans-serif;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'galmuri';
   color: rgb(0, 0, 0);
 }
 
@@ -88,4 +88,15 @@
   top: 37%;
   left : 41%;
   font-weight: bold;
+}
+
+#bgm{
+
+  display: none;
+  position: fixed;
+  top: 94%;
+  left:0%;
+  opacity: 50%;
+
+
 }
