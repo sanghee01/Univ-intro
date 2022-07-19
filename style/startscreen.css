@@ -52,3 +52,18 @@
     height: 40px;
     float: right;
 }
+
+#map{
+
+    position: fixed;
+    display: none;
+    top: 53%;
+    left: 77%;
+    width: 400px;
+    height: 400px;
+    
+    float: right;
+
+    border: 10px solid gold;
+    border-radius: 10px;
+}
