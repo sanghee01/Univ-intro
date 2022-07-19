@@ -6,6 +6,7 @@
 }
 #player {
   position: fixed;
+  display: none;
   align-items: center;
   top: 270px;
   z-index: 999;
@@ -16,7 +17,7 @@
   transition: all 1s ease;
 }
 #player1 {
-  top: 400%;
+  top: 2920px;
   right: 40%;
   transform: scaleX(-1);
 }
@@ -61,7 +62,7 @@
   flex-direction: column;
   position: absolute;
 }
-#npc1 {
+/* #npc1 {
   top: 2850px;
   right: 30%;
 }
@@ -85,6 +86,32 @@
 }
 #npc6 {
   top: 10000px;
+  left: 25%;
+  transform: scaleX(-1);
+} */
+#npc1 {
+  top: 395%;
+  right: 30%;
+}
+#npc2 {
+  top: 595%;
+  left: 25%;
+  transform: scaleX(-1);
+}
+#npc3 {
+  top: 785%;
+  right: 25%;
+}
+#npc4 {
+  top: 955%;
+  right: 25%;
+}
+#npc5 {
+  top: 1205%;
+  right: 25%;
+}
+#npc6 {
+  top: 1395%;
   left: 25%;
   transform: scaleX(-1);
 }
