@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/character.css" />
     <link rel="stylesheet" href="style/talk.css" />
     <link rel="stylesheet" href="style/startscreen.css" />
-
+    <link rel="stylesheet" href="style/link.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -68,7 +68,6 @@
       <img src="img/npc6.png" class="human" />
     </div>  
     <!-- 대화 -->
-    <section class="talk-list">
       <section class="talk-list">
         <div class="talk hidden" id="talk1">
           <div class="talk__overlay"></div>
@@ -208,13 +207,13 @@
           </div>
         </div>
     </section>
-    <div class="ground">
-      <!-- <div class ="msgheader">
-        dd
-      </div>
-      <div class="msgbody">
-        dd
-      </div> -->
+    <div class="ground hidden">
+        <a class="groundheader" href="https://www.naver.com/" target="_blank">
+          <p>더 자세히 알고싶다면 눌러봐!</p>
+        </a>
+        <div class="groundbody">
+          아니야, 대화를 조금 더 해볼게.
+        </div>
     </div>
     <script src="js/player.js"></script>
     <script src="js/start.js"></script>

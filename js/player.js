@@ -18,8 +18,10 @@ const talkWrap = document.querySelectorAll(".talk__char"); // 대사 player일�
 const talkScript = document.querySelectorAll(".talk__script"); // 대사
 const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
-//link 선언 // link css
-//const ground = document.querySelectorAll(".ground");
+//link 선언 // link css ===========================
+const ground = document.querySelectorAll(".ground");
+const groundheader = document.querySelectorAll(".groundheader");
+const groundbody = document.querySelectorAll(".groundbody");
 
 const dialogList = {
   0: {
@@ -127,5 +129,10 @@ const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
   cat[npcIndex].classList.add("hidden");
   player.classList.remove("hidden");
-  //ground[npcIndex].classList.remove("hidden");
+  ground[npcIndex].classList.remove("hidden");
 };
+
+const clicklink = () => {
+  ground[npcIndex].classList.add("hidden");
+};
+ground[npcIndex].addEventListener("click", clicklink);

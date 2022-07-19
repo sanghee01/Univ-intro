@@ -1,11 +1,38 @@
-.ground{
-    position: fixed;
-    align-items: center;
-    background-color : white;
-    margin-top: 100px;
-    width: 800px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    display: none;
+.ground {
+  position: fixed;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 100px;
+  width: 800px;
+  height: 500px;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+}
+.groundheader {
+  background-color: white;
+  width: 600px;
+  height: 100px;
+  color: black;
+  border-radius: 20px;
+  margin-top: 110px;
+  line-height: 60px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /*밑줄*/
+  font-weight: bold;
+  font-size: 130%;
+}
+.groundbody {
+  background-color: white;
+  width: 600px;
+  height: 100px;
+  color: black;
+  border-radius: 20px;
+  margin-top: 80px;
+  line-height: 100px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 130%;
 }
