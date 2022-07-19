@@ -21,7 +21,10 @@
     text-align: center;
     text-decoration: none; /*밑줄*/
     font-weight: bold;
-    font-size: 130% 
+    font-size: 130% ;
+    background-image: url("../img/프라임관.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .groundbody{
     background-color: white;
@@ -36,3 +39,4 @@
     font-weight: bold;
     font-size: 130% 
 }
+

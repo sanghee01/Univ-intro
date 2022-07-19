@@ -23,6 +23,8 @@ const ground = document.querySelector(".ground");
 const groundheader = document.querySelector(".groundheader");
 const groundbody = document.querySelector(".groundbody");
 
+
+
 const dialogList = {
   0: {
     name: "미대생",
@@ -31,8 +33,9 @@ const dialogList = {
       "여기는 뭐하는데야?",
       "여기는 대학본부이야~",
       "그렇구나!",
-      "https://www.google.com"
+      "https://www.google.com",
     ],
+    img: "../img/대학본부.jpg", 
   },
   1: {
     name: "인문대생",
@@ -43,6 +46,7 @@ const dialogList = {
       "고마워!",
       "https://github.com/",
     ],
+    img: "../img/학생회관.jpg",
   },
   2: {
     name: "공대생",
@@ -53,6 +57,7 @@ const dialogList = {
       "그렇구나! 힘내!",
       "https://naver.com",
     ],
+    img: "../img/프라임관.jpg",
   },
   3: {
     name: "자연대생",
@@ -62,8 +67,8 @@ const dialogList = {
       "아! 오늘 유전자에 대해 배웠거든 ㅎㅎ 난 휴식하러 수덕호에 왔어~",
       "물 색깔이 정말 푸르다!",
       "https://naver.com",
-
     ],
+    img: "../img/수덕호.jpg",
   },
   4: {
     name: "교수님",
@@ -73,6 +78,7 @@ const dialogList = {
       "여기는 학생지원관이다.",
       "그렇군요",
     ],
+    img: "../img/학생지원관.jpg",
   },
   5: {
     name: "의대생",
@@ -82,6 +88,7 @@ const dialogList = {
       "어쩌구저쩌구(공부중)",
       "오...",
     ],
+    img: "../img/중앙도서관.jpg",
   },
 };
 
@@ -133,6 +140,7 @@ const nextTalk = () => {
     talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
     console.dir(groundheader);
     groundheader.href=dialogList[npcIndex].script[talkIndex];
+    groundheader.style.backgroundImage=`url(${dialogList[npcIndex].img})`;
     talkIndex = 0;
     closeTalk();
   }
