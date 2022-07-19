@@ -1,5 +1,5 @@
 /*고양이*/
-.cat{
+.cat {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -11,7 +11,7 @@
   z-index: 999;
   width: 70px;
   height: 70px;
-  z-index: 9; 
+  z-index: 9;
   /* z-index확인 */
   transition: all 1s ease;
 }
@@ -49,6 +49,9 @@
   width: 84px;
   height: 116px;
 }
+.npc {
+  cursor: pointer;
+}
 #npc1 {
   top: 395%;
   right: 30%;
@@ -76,12 +79,12 @@
   transform: scaleX(-1);
 }
 /*느낌표*/
-.em{
+.em {
   position: absolute;
   width: 100px;
   height: 100px;
 }
-#em1{
+#em1 {
   top: 380%;
   right: 30%;
 }
