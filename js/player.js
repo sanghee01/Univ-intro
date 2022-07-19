@@ -19,53 +19,59 @@ const talkScript = document.querySelectorAll(".talk__script"); // 대사
 const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
 //link 선언 // link css ===========================
-const ground = document.querySelectorAll(".ground");
-const groundheader = document.querySelectorAll(".groundheader");
-const groundbody = document.querySelectorAll(".groundbody");
+const ground = document.querySelector(".ground");
+const groundheader = document.querySelector(".groundheader");
+const groundbody = document.querySelector(".groundbody");
 
 const dialogList = {
   0: {
     name: "미대생",
     script: [
-
-      "음? 원냥이 구나! 여기는 대학본부인데 대학의 내부적인 운영이 이루어지는 곳이야",
-      "그렇구나",
-      "더 자세히 알고 싶니?",
-
+      "안녕? 거기서 뭐하니",
+      "여기는 뭐하는데야?",
+      "여기는 대학본부이야~",
+      "그렇구나!",
+      "https://www.google.com",
     ],
+    img: "../img/대학본부.jpg",
   },
   1: {
     name: "인문대생",
     script: [
-      "여기는 학생회관이야~ 학생들의 편의를 봐주는 시설들과 복지시설 자치기구들과 동아리 방들이 있어!",
-      "여기는 주로 동아리 활동을 하거나 밥먹으러 올거 같아",
-      "응! 나도 동아리 활동하러 왔어 혹시 더 궁금하니?",
+      "못보던 고양이네?",
+      "대학 구경 왔어",
+      "여기는 학생회관이야~ 1층엔 뭐가있고 2층엔 ~",
+      "고마워!",
+      "https://github.com/",
     ],
+    img: "../img/학생회관.jpg",
   },
   2: {
     name: "공대생",
     script: [
-      "어..여기는 프라임관이라고 하는데 컴퓨터나 식품에 관련있는 학과 학생들이 주로 공부하고 있어",
-      "너는 컴퓨터학과야?",
-      "어..그렇지? 프라임관에 대해 더 궁금해?",
+      "끄어어...",
+      "왜그래??",
+      "여기는 프라임관.. 대부분 SW계열과가 여기에 있어.. 코딩하느라 힘들다",
+      "그렇구나! 힘내!",
+      "https://naver.com",
     ],
+    img: "../img/프라임관.jpg",
   },
   3: {
     name: "자연대생",
     script: [
-      "음? 저기는 수덕호인데 봉황각이라고도 불려 원대에 랜드마크 같은 존재지",
-      "그 음료수는 어디서 산거야?",
-      "이거? 수덕호 중앙에 있는 카페에서 샀어",
-      "맛있겠다!",
-      "맛있지~ 수덕호에 관심있으면 더 알려줄까?",
+      "넌 열성유전자를 갖고있군",
+      "뭐라는거야",
+      "아! 오늘 유전자에 대해 배웠거든 ㅎㅎ 난 휴식하러 수덕호에 왔어~",
+      "물 색깔이 정말 푸르다!",
+      "https://naver.com",
     ],
+    img: "../img/수덕호.jpg",
   },
   4: {
     name: "교수님",
-    script: ["여기 말인가? 이곳은 여러 행사들을 진행하여 학생들이 다양한 경험을 하게 도와주는 곳이지",
-             "그렇군요! 재밌는것도 많이 하겠네요!", 
-             "흥미를 돋울만한 것 위주로 하지..더 궁금하니?",
-            ],
+    script: ["엣헴", "엇.. 교수님?!", "여기는 학생지원관이다.", "그렇군요"],
+    img: "../img/학생지원관.jpg",
   },
   5: {
     name: "의대생",
@@ -76,6 +82,7 @@ const dialogList = {
       "오...난 못 들어가겠네",
       "중앙 도서관에 대해 더 알고 싶어?",
     ],
+    img: "../img/중앙도서관.jpg",
   },
 };
 
@@ -122,9 +129,12 @@ const nextTalk = () => {
   talkScript[npcIndex].textContent = dialog.script[talkIndex];
   talkIndex++;
 
-  if (talkIndex === dialog.script.length + 1) {
+  if (talkIndex === dialog.script.length - 1) {
+    talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
+    console.dir(groundheader);
+    groundheader.href = dialogList[npcIndex].script[talkIndex];
+    groundheader.style.backgroundImage = `url(${dialogList[npcIndex].img})`;
     talkIndex = 0;
-    talkScript[npcIndex].textContent = "여기에 대해 다시 듣고 싶어!";
     closeTalk();
   }
 };
@@ -133,10 +143,10 @@ const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
   cat[npcIndex].classList.add("hidden");
   player.classList.remove("hidden");
-  ground[npcIndex].classList.remove("hidden");
+  ground.classList.remove("hidden");
 };
 
 const clicklink = () => {
-  ground[npcIndex].classList.add("hidden");
+  ground.classList.add("hidden");
 };
-ground[npcIndex].addEventListener("click", clicklink);
+ground.addEventListener("click", clicklink);

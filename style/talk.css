@@ -42,6 +42,11 @@
   font-size: 19px;
   border: 1px solid purple;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.nextBtn:hover {
+  background-color: rgb(226, 91, 159);
 }
 .btn-wrap {
   width: 100%;
