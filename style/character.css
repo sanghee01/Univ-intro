@@ -6,6 +6,7 @@
 }
 #player {
   position: fixed;
+  display: none;
   align-items: center;
   top: 200px;
   z-index: 999;
