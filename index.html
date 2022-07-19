@@ -9,161 +9,203 @@
     <link rel="stylesheet" href="style/character.css" />
     <link rel="stylesheet" href="style/talk.css" />
     <link rel="stylesheet" href="style/link.css" />
+    <link rel="stylesheet" href="style/startscreen.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body id = "scroll">
+
+    <div id ="upside">
+      &nbsp;&nbsp;WKU  <a id = 'instar' href="https://www.instagram.com/wonkwang_univ/" target="_blank" title="원광대 공식 인스타그램 이동"><img src="img/InstargramIcon.png" id="icon"></a>
+      <a id = 'instar' href="https://www.facebook.com/WonkwangUniversity" target="_blank" title="원광대 공식 페이스 북 이동"><img src="img/FacebookIcon.png" id="icon"></a>
+    </div>
+
+    <div id = "box">
+      <div id = "TITLE"><h1>WKU</h1></div>
+      <button id= "startbutton">둘러보기</button>
+    </div>
+    <div id="start_overlay"></div>
   </head>
   <body>
-    <img src="img/player.gif" id="player"/>
+    <!-- player -->
+    <img src="img/player.gif" id="player"/> 
+    <!-- 대화 시 player 이동한 사진 -->
     <img src="img/player.gif" class="cat hidden" id="player1"/>
     <img src="img/player.gif" class="cat hidden" id="player2"/>
     <img src="img/player.gif" class="cat hidden" id="player3"/>
     <img src="img/player.gif" class="cat hidden" id="player4"/>
     <img src="img/player.gif" class="cat hidden" id="player5"/>
     <img src="img/player.gif" class="cat hidden" id="player6"/>
-    <div class="npc">
+    <!-- npc & 느낌표 -->
+    <div class="npc" id="npc1">
       <img src="img/!.gif" class="em" id="em1"/>
-      <img src="img/npc1.png" class="human" id="npc1"/>
+      <img src="img/npc1.png" class="human" />
     </div>
-    <div class="npc">
+    <div class="npc" id="npc2">
       <img src="img/!.gif" class="em" id="em2">
-      <img src="img/npc2.png" class="human" id="npc2"/>
+      <img src="img/npc2.png" class="human" />
     </div>
-    <div class="npc">
+    <div class="npc" id="npc3">
       <img src="img/!.gif" class="em" id="em3"/>
-      <img src="img/npc3.png" class="human" id="npc3"/>
+      <img src="img/npc3.png" class="human" />
     </div>
-    <div class="npc">
+    <div class="npc" id="npc4">
       <img src="img/!.gif" class="em" id="em4"/>
-      <img src="img/npc4.png" class="human" id="npc4"/>
+      <img src="img/npc4.png" class="human" />
     </div>
-    <div class="npc">
+    <div class="npc" id="npc5">
       <img src="img/!.gif" class="em" id="em5"/>
-      <img src="img/npc5.png" class="human" id="npc5"/>
+      <img src="img/npc5.png" class="human" />
     </div>
-    <div class="npc">
+    <div class="npc" id="npc6">
       <img src="img/!.gif" class="em" id="em6"/>
-      <img src="img/npc6.png" class="human" id="npc6"/>
+      <img src="img/npc6.png" class="human" />
     </div>  
+    <!-- 대화 -->
     <section class="talk-list">
-      <div class="talk hidden" id="talk1">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc1.png" class="talk-npc-img" />
-              <h3>npc</h3>
+      <section class="talk-list">
+        <div class="talk hidden" id="talk1">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc1.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
             </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
-            </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!1</p>
-            <div class="nextBtn">
-              <i class="fas fa-angle-down"></i>
+            <div class="talk__content">
+              <p class="talk__script">안녕!1</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="talk hidden" id="talk2">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc2.png" class="talk-npc-img" />
-              <h3>npc</h3>
+        <div class="talk hidden" id="talk2">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc2.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
             </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
+            <div class="talk__content">
+              <p class="talk__script">안녕!2</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!2</p>
-            <button class="nextBtn">다음</button>
           </div>
         </div>
-      </div>
-      <div class="talk hidden" id="talk3">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc3.png" class="talk-npc-img" />
-              <h3>npc</h3>
+        <div class="talk hidden" id="talk3">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc3.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
             </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
+            <div class="talk__content">
+              <p class="talk__script">안녕!3</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!3</p>
-            <button class="nextBtn">다음</button>
           </div>
         </div>
-      </div>
-      <div class="talk hidden" id="talk4">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc4.png" class="talk-npc-img" />
-              <h3>npc</h3>
+        <div class="talk hidden" id="talk4">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc4.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
             </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
+            <div class="talk__content">
+              <p class="talk__script">안녕!4</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!4</p>
-            <button class="nextBtn">다음</button>
           </div>
         </div>
-      </div>
-      <div class="talk hidden" id="talk5">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc5.png" class="talk-npc-img" />
-              <h3>npc</h3>
+        <div class="talk hidden" id="talk5">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc5.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
             </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
-            </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!5</p>
-            <button class="nextBtn">다음</button>
-          </div>
-        </div>
-      </div>
-      <div class="talk hidden" id="talk6">
-        <div class="talk__overlay"></div>
-        <div class="talk__wrap">
-          <div class="talk__char">
-            <div class="talk__npc hidden">
-              <img src="img/npc6.png" class="talk-npc-img" />
-              <h3>npc</h3>
-            </div>
-            <div class="talk__player">
-              <img src="img/player-stop.png" class="talk-player-img" />
-              <h3>냥도리</h3>
-            </div>
-          </div>
-          <div class="talk__content">
-            <p class="talk__script">안녕!6</p>
-            <button class="nextBtn">다음</button>
+            <div class="talk__content">
+              <p class="talk__script">안녕!5</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
           </div>
         </div>
-      </div>
+        <div class="talk hidden" id="talk6">
+          <div class="talk__overlay"></div>
+          <div class="talk__wrap">
+            <div class="talk__char">
+              <div class="talk__npc hidden">
+                <img src="img/npc6.png" class="talk-npc-img" />
+                <h3>npc</h3>
+              </div>
+              <div class="talk__player">
+                <img src="img/player-stop.png" class="talk-player-img" />
+                <h3>냥도리</h3>
+              </div>
+            </div>
+            <div class="talk__content">
+              <p class="talk__script">안녕!6</p>
+              <div class="btn-wrap">
+                <div class="nextBtn">
+                  다음
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
     <div class="ground hidden">
         <a class="groundheader" href="https://www.naver.com/" target="_blank">
@@ -174,5 +216,6 @@
         </div>
     </div>
     <script src="js/player.js"></script>
+    <script src="js/start.js"></script>
   </body>
 </html>

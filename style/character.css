@@ -1,5 +1,5 @@
 /*고양이*/
-.cat{
+.cat {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -11,6 +11,8 @@
   z-index: 999;
   width: 70px;
   height: 70px;
+  z-index: 9;
+  /* z-index확인 */
   transition: all 1s ease;
 }
 #player1 {
@@ -43,63 +45,48 @@
 }
 /*human*/
 .human {
+  position: relative;
+  width: 84px;
+  height: 116px;
+  z-index: 3;
+}
+.em {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  z-index: 3;
+  top: -60px;
+  left: 15px;
+}
+
+.npc {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }
 #npc1 {
-  top: 395%;
+  top: 2850px;
   right: 30%;
 }
 #npc2 {
-  top: 595%;
+  top: 4200px;
   left: 25%;
   transform: scaleX(-1);
 }
 #npc3 {
-  top: 785%;
+  top: 5700px;
   right: 25%;
 }
 #npc4 {
-  top: 955%;
-  right: 25%;
-}
-#npc5 {
-  top: 1205%;
-  right: 25%;
-}
-#npc6 {
-  top: 1395%;
+  top: 7000px;
   left: 25%;
   transform: scaleX(-1);
 }
-/*느낌표*/
-.em{
-  position: absolute;
-  width: 100px;
-  height: 100px;
+#npc5 {
+  top: 8600px;
+  right: 28%;
 }
-#em1{
-  top: 380%;
-  right: 30%;
-}
-#em2 {
-  top: 580%;
+#npc6 {
+  top: 10000px;
   left: 25%;
-}
-#em3 {
-  top: 770%;
-  right: 25%;
-}
-#em4 {
-  top: 940%;
-  right: 25%;
-}
-#em5 {
-  top: 1190%;
-  right: 25%;
-}
-#em6 {
-  top: 1380%;
-  left: 25%;
+  transform: scaleX(-1);
 }
