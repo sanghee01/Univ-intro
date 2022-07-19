@@ -18,6 +18,9 @@ const talkWrap = document.querySelectorAll(".talk__char"); // 대사 player일�
 const talkScript = document.querySelectorAll(".talk__script"); // 대사
 const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
+const audio = document.getElementById("nyaong");
+
+
 //link 선언 // link css
 //const ground = document.querySelectorAll(".ground");
 
@@ -81,7 +84,10 @@ let npcIndex = 0;
 
 // 클릭한 npc 인식 및 그 npc로 대사 설정, 대화창 띄움
 npcList.forEach((npc, index) => {
+  
   npc.addEventListener("click", () => {
+    audio.play();
+
     dialog = dialogList[index]; // 추후 close에서 수정해야하나? 근데 실행할때마다 해서 상관업을 것 같기도
     // console.dir(dialog);
     npcIndex = index;
@@ -120,10 +126,16 @@ const nextTalk = () => {
   talkScript[npcIndex].textContent = dialog.script[talkIndex];
   talkIndex++;
 
-  if (talkIndex === dialog.script.length + 1) {
+  if (talkIndex == dialog.script.length + 1) {
     talkIndex = 0;
+    if(npcIndex == 4){
+    talkScript[npcIndex].textContent = "여기에 대해 다시 듣고 싶어요!";
+    closeTalk();
+    }
+    else{
     talkScript[npcIndex].textContent = "여기에 대해 다시 듣고 싶어!";
     closeTalk();
+    }
   }
 };
 // 대화창 끔
