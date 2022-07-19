@@ -35,7 +35,7 @@ const dialogList = {
       "그렇구나!",
       "https://www.google.com",
     ],
-    img: "../img/대학본부.jpg", 
+    img: "../img/대학본부.png", 
   },
   1: {
     name: "인문대생",
@@ -46,7 +46,7 @@ const dialogList = {
       "고마워!",
       "https://github.com/",
     ],
-    img: "../img/학생회관.jpg",
+    img: "../img/학생회관.png",
   },
   2: {
     name: "공대생",
@@ -57,7 +57,7 @@ const dialogList = {
       "그렇구나! 힘내!",
       "https://naver.com",
     ],
-    img: "../img/프라임관.jpg",
+    img: "../img/프라임관.png",
   },
   3: {
     name: "자연대생",
@@ -68,7 +68,7 @@ const dialogList = {
       "물 색깔이 정말 푸르다!",
       "https://naver.com",
     ],
-    img: "../img/수덕호.jpg",
+    img: "../img/수덕호.png",
   },
   4: {
     name: "교수님",
@@ -78,7 +78,7 @@ const dialogList = {
       "여기는 학생지원관이다.",
       "그렇군요",
     ],
-    img: "../img/학생지원관.jpg",
+    img: "../img/학생지원관.png",
   },
   5: {
     name: "의대생",
