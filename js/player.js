@@ -105,6 +105,7 @@ npcList.forEach((npc, index) => {
     // console.dir(dialog);
     npcIndex = index;
     openTalk(npcIndex);
+    console.log();
   });
 });
 let dialog = {};
