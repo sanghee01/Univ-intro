@@ -51,3 +51,16 @@
   height: 40px;
   float: right;
 }
+
+#map {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  float: right;
+  z-index: 9999999999;
+  border: 10px solid gold;
+  border-radius: 10px;
+}
