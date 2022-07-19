@@ -15,7 +15,7 @@ const clickbutton = () =>{
 
     map.style.display="block";
     player_image.style.display="block";
-    upside.style.display="block";
+//  upside.style.display="block";
     //스크롤바 보이게 하기
     scrolling.style.overflow="visible";
     scrollTo({left:0, top:1935, behavior:"smooth"});
