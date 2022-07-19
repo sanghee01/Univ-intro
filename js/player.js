@@ -103,7 +103,7 @@ const dialogList = {
       "-",
       "https://elibrary.wku.ac.kr/lib/SlimaPlus.csp#link",
     ],
-    img: "../img/중앙도서관.jpg",
+    img: "../img/중앙도서관.png",
   },
 };
 
