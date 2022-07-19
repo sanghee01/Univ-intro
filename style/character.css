@@ -7,7 +7,7 @@
 #player {
   position: fixed;
   align-items: center;
-  top: 220px;
+  top: 270px;
   z-index: 999;
   width: 70px;
   height: 70px;
@@ -48,11 +48,9 @@
   position: relative;
   width: 84px;
   height: 116px;
-  z-index: 3;
 }
 .em {
   position: absolute;
-  z-index: 3;
   top: -60px;
   left: 15px;
 }
