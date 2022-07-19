@@ -1,49 +1,48 @@
 #start_overlay {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
 }
-#TITLE{
-    width: 100%;
-    height: 100%;
-    font-size: 30px;
-}
-
-#startbutton{
-    width: 500px;
-    height:50px;
-    font-size: 30px;
-    font-weight: bold;
-    background-color: gold;
-    border:0;
-    outline: 0;
-    border-radius: 10%;
+#TITLE {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
 }
 
-#box{
-    margin-top: 70px;
-    background-color: aliceblue;
-    width: 500px;
-    height: 700px;
-    z-index: 10;
-    border-radius: 5%;
-    text-align: center;
-
+#startbutton {
+  width: 500px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: gold;
+  border: 0;
+  outline: 0;
+  border-radius: 10%;
 }
 
-#scroll{
-    overflow: hidden;
+#box {
+  background-color: aliceblue;
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+  border-radius: 5%;
+  text-align: center;
 }
 
-#upside{
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 100%;
-    height: 6%;
-    position: fixed;
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
+#scroll {
+  overflow: hidden;
+}
+
+#upside {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 #icon{

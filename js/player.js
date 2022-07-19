@@ -21,7 +21,6 @@ const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + �
 //link 선언 // link css
 //const ground = document.querySelectorAll(".ground");
 
-
 const dialogList = {
   0: {
     name: "미대생",
@@ -104,18 +103,15 @@ let talkIndex = 0;
 // nextBtn을 누르면 대화 내용 다음꺼로 변경, 마지막 대화 넘으면 closeTalk 실행(대화창 끔)
 const nextTalk = () => {
   if (talkIndex % 2 == 0) {
+    // 짝수일때 player 보임
     talkPlayer[npcIndex].classList.add("hidden");
     talkNpc[npcIndex].classList.remove("hidden");
     talkWrap[npcIndex].classList.remove("talk__char--right");
-
-    console.log("나 짝수임");
-    console.dir(talkPlayer[npcIndex]);
   } else {
+    // 홀수일때 npc 보임
     talkPlayer[npcIndex].classList.remove("hidden");
     talkWrap[npcIndex].classList.add("talk__char--right");
     talkNpc[npcIndex].classList.add("hidden");
-    console.log("나 홀수임");
-    console.dir(talkNpc[npcIndex]);
   }
   talkScript[npcIndex].textContent = dialog.script[talkIndex];
   talkIndex++;
