@@ -1,0 +1,94 @@
+#start_overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+#TITLE {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+#startbutton {
+  width: 500px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: gold;
+  color: rgb(99, 57, 46);
+  border: 0;
+  outline: 0;
+  border-radius: 10%;
+}
+
+#box {
+  background-color: aliceblue;
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+  border-radius: 5%;
+  text-align: center;
+}
+
+#scroll {
+  overflow: hidden;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+#upside {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: none;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0px;
+  font-size: 40px;
+  font-weight: 300%;
+  color: rgb(0, 0, 0);
+  z-index: 99999999999999999;
+}
+
+#icon {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+#video {
+  position: absolute;
+  top: 43%;
+  left: 38.3%;
+  width: 23.5%;
+  height: 30%;
+}
+
+#map {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  float: right;
+  border: 10px solid gold;
+  border-radius: 10px;
+  z-index: 99999999999999999999;
+}
+
+#extext {
+  position: absolute;
+  top: 37%;
+  left: 41%;
+  font-weight: bold;
+}
+
+#bgm {
+  display: none;
+  position: fixed;
+  top: 94%;
+  left: 0%;
+  opacity: 50%;
+}

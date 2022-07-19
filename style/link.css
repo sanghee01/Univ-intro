@@ -1,0 +1,43 @@
+.ground {
+  position: fixed;
+  align-items: center;
+  margin-top: 100px;
+  width: 800px;
+  height: 500px;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+}
+.textBox {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 130%;
+  cursor: pointer;
+  line-height: 100px;
+}
+.groundheader {
+  width: 600px;
+  height: 100px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 110px;
+  text-align: center;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-decoration: none; /*밑줄*/
+}
+.groundbody {
+  background-color: white;
+  width: 600px;
+  height: 100px;
+  color: black;
+  border-radius: 20px;
+  margin-top: 80px;
+  line-height: 100px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 130%;
+}

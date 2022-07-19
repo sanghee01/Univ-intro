@@ -1,28 +1,117 @@
+/*고양이*/
+.cat {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
 #player {
   position: fixed;
-  top: 170px;
-  width: 60px;
-  left: 700px;
-  height: 60px;
-  transition: all 1s ease;
+  display: none;
+  align-items: center;
+  top: 270px;
   z-index: 999;
+  width: 70px;
+  height: 70px;
+  z-index: 9;
+  /* z-index확인 */
+  transition: all 1s ease;
 }
-.npc {
-  position: absolute;
-  width: 60px;
-  height: 90px;
-}
-#npc1 {
-  top: 400px;
-  left: 560px;
+#player1 {
+  top: 2920px;
+  right: 40%;
   transform: scaleX(-1);
 }
+#player2 {
+  top: 600%;
+  left: 35%;
+}
+#player3 {
+  top: 790%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player4 {
+  top: 960%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player5 {
+  top: 1210%;
+  right: 35%;
+  transform: scaleX(-1);
+}
+#player6 {
+  top: 1400%;
+  left: 35%;
+}
+/*human*/
+.human {
+  position: relative;
+  width: 84px;
+  height: 116px;
+}
+.em {
+  position: absolute;
+  top: -60px;
+  left: 15px;
+}
+
+.npc {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+/* #npc1 {
+  top: 2850px;
+  right: 30%;
+}
 #npc2 {
-  top: 1350px;
-  right: 550px;
+  top: 4200px;
+  left: 25%;
+  transform: scaleX(-1);
 }
 #npc3 {
-  top: 2100px;
-  left: 600px;
+  top: 5700px;
+  right: 25%;
+}
+#npc4 {
+  top: 7000px;
+  left: 25%;
+  transform: scaleX(-1);
+}
+#npc5 {
+  top: 8600px;
+  right: 28%;
+}
+#npc6 {
+  top: 10000px;
+  left: 25%;
+  transform: scaleX(-1);
+} */
+#npc1 {
+  top: 395%;
+  right: 30%;
+}
+#npc2 {
+  top: 595%;
+  left: 25%;
+  transform: scaleX(-1);
+}
+#npc3 {
+  top: 785%;
+  right: 25%;
+}
+#npc4 {
+  top: 955%;
+  right: 25%;
+}
+#npc5 {
+  top: 1205%;
+  right: 25%;
+}
+#npc6 {
+  top: 1395%;
+  left: 25%;
   transform: scaleX(-1);
 }
