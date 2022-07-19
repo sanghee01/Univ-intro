@@ -19,9 +19,9 @@ const talkScript = document.querySelectorAll(".talk__script"); // 대사
 const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
 
 //link 선언 // link css ===========================
-const ground = document.querySelectorAll(".ground");
-const groundheader = document.querySelectorAll(".groundheader");
-const groundbody = document.querySelectorAll(".groundbody");
+const ground = document.querySelector(".ground");
+const groundheader = document.querySelector(".groundheader");
+const groundbody = document.querySelector(".groundbody");
 
 const dialogList = {
   0: {
@@ -31,6 +31,7 @@ const dialogList = {
       "여기는 뭐하는데야?",
       "여기는 대학본부이야~",
       "그렇구나!",
+      "https://www.google.com"
     ],
   },
   1: {
@@ -40,6 +41,7 @@ const dialogList = {
       "대학 구경 왔어",
       "여기는 학생회관이야~ 1층엔 뭐가있고 2층엔 ~",
       "고마워!",
+      "https://github.com/",
     ],
   },
   2: {
@@ -49,6 +51,7 @@ const dialogList = {
       "왜그래??",
       "여기는 프라임관.. 대부분 SW계열과가 여기에 있어.. 코딩하느라 힘들다",
       "그렇구나! 힘내!",
+      "https://naver.com",
     ],
   },
   3: {
@@ -58,11 +61,18 @@ const dialogList = {
       "뭐라는거야",
       "아! 오늘 유전자에 대해 배웠거든 ㅎㅎ 난 휴식하러 수덕호에 왔어~",
       "물 색깔이 정말 푸르다!",
+      "https://naver.com",
+
     ],
   },
   4: {
     name: "교수님",
-    script: ["엣헴", "엇.. 교수님?!", "여기는 학생지원관이다.", "그렇군요"],
+    script: [
+      "엣헴",
+      "엇.. 교수님?!",
+      "여기는 학생지원관이다.",
+      "그렇군요",
+    ],
   },
   5: {
     name: "의대생",
@@ -118,9 +128,12 @@ const nextTalk = () => {
   talkScript[npcIndex].textContent = dialog.script[talkIndex];
   talkIndex++;
 
-  if (talkIndex === dialog.script.length + 1) {
-    talkIndex = 0;
+ 
+  if (talkIndex === dialog.script.length-1) {
     talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
+    console.dir(groundheader);
+    groundheader.href=dialogList[npcIndex].script[talkIndex];
+    talkIndex = 0;
     closeTalk();
   }
 };
@@ -129,10 +142,10 @@ const closeTalk = () => {
   talk[npcIndex].classList.add("hidden");
   cat[npcIndex].classList.add("hidden");
   player.classList.remove("hidden");
-  ground[npcIndex].classList.remove("hidden");
+  ground.classList.remove("hidden");
 };
 
 const clicklink = () => {
-  ground[npcIndex].classList.add("hidden");
+  ground.classList.add("hidden");
 }
-ground[npcIndex].addEventListener("click",clicklink)
+ground.addEventListener("click",clicklink)
