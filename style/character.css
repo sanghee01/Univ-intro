@@ -17,32 +17,31 @@
   transition: all 1s ease;
 }
 #player1 {
-  top: 2920px;
-  right: 40%;
+  top: 390%;
+  right: 35%;
   transform: scaleX(-1);
 }
 #player2 {
-  top: 600%;
-  left: 35%;
+  top: 580%;
+  left: 30%;
 }
 #player3 {
-  top: 790%;
-  right: 35%;
+  top: 770%;
+  right: 31%;
   transform: scaleX(-1);
 }
 #player4 {
   top: 960%;
-  right: 35%;
-  transform: scaleX(-1);
+  left: 40%;
 }
 #player5 {
-  top: 1210%;
-  right: 35%;
+  top: 1170%;
+  right: 32%;
   transform: scaleX(-1);
 }
 #player6 {
-  top: 1400%;
-  left: 35%;
+  top: 1360%;
+  left: 30%;
 }
 /*human*/
 .human {
@@ -62,56 +61,39 @@
   flex-direction: column;
   position: absolute;
 }
-/* #npc1 {
-  top: 2850px;
-  right: 30%;
-}
-#npc2 {
-  top: 4200px;
-  left: 25%;
-  transform: scaleX(-1);
-}
-#npc3 {
-  top: 5700px;
-  right: 25%;
-}
-#npc4 {
-  top: 7000px;
-  left: 25%;
-  transform: scaleX(-1);
-}
-#npc5 {
-  top: 8600px;
-  right: 28%;
-}
-#npc6 {
-  top: 10000px;
-  left: 25%;
-  transform: scaleX(-1);
-} */
+
 #npc1 {
-  top: 395%;
+  top: 385%;
   right: 30%;
 }
 #npc2 {
-  top: 595%;
+  top: 575%;
   left: 25%;
   transform: scaleX(-1);
 }
 #npc3 {
-  top: 785%;
-  right: 25%;
+  top: 765%;
+  right: 27%;
 }
 #npc4 {
   top: 955%;
-  right: 25%;
+ left: 35%;
+  transform: scaleX(-1);
+
 }
 #npc5 {
-  top: 1205%;
-  right: 25%;
+  top: 1160%;
+  right: 27%;
 }
 #npc6 {
-  top: 1395%;
+  top: 1355%;
   left: 25%;
   transform: scaleX(-1);
+  margin-bottom: 200px;
+}
+#stone{
+  position: absolute;
+  top:1420%;
+  width: 4px;
+  height: 4px;
 }
