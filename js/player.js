@@ -157,7 +157,7 @@ const nextTalk = () => {
   talkIndex++;
 
   if (talkIndex === dialog.script.length - 1) {
-    talkScript.textContent = "안녕! 다시 물어보러왔어!";
+    talkScript.textContent = "안녕! 이 건물은 뭐하는 곳이야?";
     groundheader.href = dialogList[npcIndex].script[talkIndex];
     groundheader.style.backgroundImage = `url(${dialogList[npcIndex].img})`;
     talkIndex = 0;
