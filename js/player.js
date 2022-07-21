@@ -4,27 +4,24 @@ window.onbeforeunload = function () {
 
 const player = document.querySelector("#player");
 const npcList = document.querySelectorAll(".npc");
-// const talk1 = document.querySelector("#talk1");
-// const talk2 = document.querySelector("#talk2");
-// const talk3 = document.querySelector("#talk3");
-const talk = document.querySelectorAll(".talk");
-const overlay = document.querySelectorAll(".talk__overlay");
-const nextBtn = document.querySelectorAll(".nextBtn");
-const talkNpc = document.querySelectorAll(".talk__npc");
+const talk = document.querySelector(".talk");
+const overlay = document.querySelector(".talk__overlay");
+const nextBtn = document.querySelector(".nextBtn");
+const talkNpc = document.querySelector(".talk__npc");
 const cat = document.querySelectorAll(".cat");
-const talkNpcName = document.querySelectorAll(".talk__npc>h3");
-const talkPlayer = document.querySelectorAll(".talk__player");
-const talkWrap = document.querySelectorAll(".talk__char"); // 대사 player일때 오른쪽 정렬하기 위해 씀
-const talkScript = document.querySelectorAll(".talk__script"); // 대사
-const talkChar = document.querySelectorAll(".talk__char-wrap"); // 이미지 + 이름
+const talkPlayer = document.querySelector(".talk__player"); // 대사 고양이
+const talkNpcImg = document.querySelector(".talk-npc-img"); // 대사 npc이미지
+const talkNpcName = document.querySelector(".talk__npc>h3"); // 대사 npc 이름
+const talkChar = document.querySelector(".talk__char-wrap"); // 대사 이미지 + 이름
+const talkScript = document.querySelector(".talk__script"); // 대사
+const talkWrap = document.querySelector(".talk__char"); // 대사 player일때 오른쪽 정렬하기 위해 씀
 
-//link 선언 // link css ===========================
+//link
 const ground = document.querySelector(".ground");
 const groundheader = document.querySelector(".groundheader");
 const groundbody = document.querySelector(".groundbody");
 // 오디오 설정
 const audio = document.getElementById("nyaong");
-//link 선언 // link css
 
 const dialogList = {
   0: {
@@ -39,6 +36,7 @@ const dialogList = {
       "https://www.wku.ac.kr/about/institutions/offices.html",
     ],
     img: "../img/대학본부.png",
+    npcImg: "../img/npc1.png",
   },
   1: {
     name: "인문대생",
@@ -52,6 +50,7 @@ const dialogList = {
       "https://www.youtube.com/watch?v=UKAspu8Lz_k",
     ],
     img: "../img/학생회관.png",
+    npcImg: "../img/npc2.png",
   },
   2: {
     name: "공대생",
@@ -65,6 +64,7 @@ const dialogList = {
       "https://www.youtube.com/watch?v=F2b7d18Sl4Y",
     ],
     img: "../img/프라임관.png",
+    npcImg: "../img/npc3.png",
   },
   3: {
     name: "자연대생",
@@ -78,6 +78,7 @@ const dialogList = {
       "https://www.youtube.com/watch?v=2_j5GXY7624",
     ],
     img: "../img/수덕호.png",
+    npcImg: "../img/npc4.png",
   },
   4: {
     name: "교수님",
@@ -91,6 +92,7 @@ const dialogList = {
       "https://www.youtube.com/watch?v=ZqWBvbJJrbo",
     ],
     img: "../img/학생지원관.png",
+    npcImg: "../img/npc5.png",
   },
   5: {
     name: "의대생",
@@ -104,6 +106,7 @@ const dialogList = {
       "https://elibrary.wku.ac.kr/lib/SlimaPlus.csp#link",
     ],
     img: "../img/중앙도서관.png",
+    npcImg: "../img/npc6.png",
   },
 };
 
@@ -124,14 +127,15 @@ let dialog = {};
 
 // hidden을 없애면서 대화창 띄움. 띄워야지 nextBtn click event를 인식함
 const openTalk = (npcIndex) => {
-  talkPlayer[npcIndex].classList.remove("hidden");
-  talkNpc[npcIndex].classList.add("hidden");
-  talkWrap[npcIndex].classList.add("talk__char--right");
-  talk[npcIndex].classList.remove("hidden");
+  talkPlayer.classList.remove("hidden");
+  talkNpc.classList.add("hidden");
+  talkWrap.classList.add("talk__char--right");
+  talk.classList.remove("hidden");
   cat[npcIndex].classList.remove("hidden");
   player.classList.add("hidden");
-  nextBtn[npcIndex].addEventListener("click", nextTalk);
-  talkNpcName[npcIndex].textContent = dialog.name; // 클릭한 npc 이름 설정
+  nextBtn.addEventListener("click", nextTalk);
+  talkNpcName.textContent = dialog.name; // 클릭한 npc 이름 설정
+  talkNpcImg.src = dialogList[npcIndex].npcImg; // 클린한 npc 이미지 설정
   //overlay[npcIndex].addEventListener("click", closeTalk);
 };
 let talkIndex = 0;
@@ -140,20 +144,20 @@ let talkIndex = 0;
 const nextTalk = () => {
   if (talkIndex % 2 == 0) {
     // 짝수일때 player 보임
-    talkPlayer[npcIndex].classList.add("hidden");
-    talkNpc[npcIndex].classList.remove("hidden");
-    talkWrap[npcIndex].classList.remove("talk__char--right");
+    talkPlayer.classList.add("hidden");
+    talkNpc.classList.remove("hidden");
+    talkWrap.classList.remove("talk__char--right");
   } else {
     // 홀수일때 npc 보임
-    talkPlayer[npcIndex].classList.remove("hidden");
-    talkWrap[npcIndex].classList.add("talk__char--right");
-    talkNpc[npcIndex].classList.add("hidden");
+    talkPlayer.classList.remove("hidden");
+    talkWrap.classList.add("talk__char--right");
+    talkNpc.classList.add("hidden");
   }
-  talkScript[npcIndex].textContent = dialog.script[talkIndex];
+  talkScript.textContent = dialog.script[talkIndex];
   talkIndex++;
 
-  if (talkIndex === dialog.script.length-1) {
-    talkScript[npcIndex].textContent = "안녕! 다시 물어보러왔어!";
+  if (talkIndex === dialog.script.length - 1) {
+    talkScript.textContent = "안녕! 다시 물어보러왔어!";
     groundheader.href = dialogList[npcIndex].script[talkIndex];
     groundheader.style.backgroundImage = `url(${dialogList[npcIndex].img})`;
     talkIndex = 0;
@@ -163,7 +167,7 @@ const nextTalk = () => {
 
 // 대화창 끔
 const closeTalk = () => {
-  talk[npcIndex].classList.add("hidden");
+  talk.classList.add("hidden");
   cat[npcIndex].classList.add("hidden");
   player.classList.remove("hidden");
   ground.classList.remove("hidden");
