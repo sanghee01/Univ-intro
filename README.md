@@ -20,6 +20,6 @@
 
 ## 팀 역할
 
-- 이상희 - PM, FrontEnd
+- 이상희 - FrontEnd
 - 신유민 - FrontEnd
 - 심하연 - 그림, FrontEnd
