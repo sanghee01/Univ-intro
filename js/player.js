@@ -150,6 +150,7 @@ const nextTalk = () => {
     talkScript.textContent = "안녕! 이 건물은 뭐하는 곳이야?";
     groundheader.href = dialogList[npcIndex].url;
     groundheader.style.backgroundImage = `url(${dialogList[npcIndex].img})`;
+    console.dir(groundheader);
     talkIndex = 0;
     closeTalk();
   }
