@@ -13,9 +13,9 @@ addEventListener("scroll", () => {
   const scrollY = this.scrollY;
 
   if (scrollY > locationY[0] - 1000 && scrollY <= locationY[1] - 1000) {
-    mapLocation.style.backgroundImage = `url(${"./../img/Unimap_bonboo.png"}`;
+    mapLocation.style.backgroundImage = `url(${"../img/Unimap_bonboo.png"}`;
   } else if (scrollY >= locationY[1] - 1000 && scrollY <= locationY[2] - 1000) {
-    mapLocation.style.backgroundImage = `url(${"./img/Unimap_student.png"}`;
+    mapLocation.style.backgroundImage = `url(${"../img/Unimap_student.png"}`;
   } else if (scrollY >= locationY[2] - 1000 && scrollY <= locationY[3] - 1000) {
     mapLocation.style.backgroundImage = `url(${"../img/Unimap_prime.png"}`;
   } else if (scrollY >= locationY[3] - 1000 && scrollY <= locationY[4] - 1000) {
