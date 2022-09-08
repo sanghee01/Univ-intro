@@ -6,6 +6,13 @@
 <br>
 <br>
 
+## 서비스 주소
+
+https://wkuintro.netlify.app/
+
+<br>
+<br>
+
 ## 서비스 화면
 
 ![시작화면](img/%EC%8B%9C%EC%9E%91%ED%99%94%EB%A9%B4.png)
