@@ -1,54 +1,30 @@
-(function (open) {
-  console.log("시작");
-  scrollTo(0, 0);
-})("open");
+const mapLocation = document.querySelector("#map");
+const npcs = document.querySelectorAll(".human");
+let npcLocation = 0;
+let locationY = [];
+scrollTo(0, 0);
 
-addEventListener("scroll", (eventname) => {
+for (let npc of npcs) {
+  npcLocation = window.pageXOffset + npc.getBoundingClientRect().top;
+  locationY.push(npcLocation);
+}
+
+addEventListener("scroll", () => {
   const scrollY = this.scrollY;
 
-  if (scrollY >= 2543 && scrollY <= 3775) {
-    document.getElementById("map").src = "img/Unimap_bonboo.png";
-  } else if (scrollY >= 4117 && scrollY <= 5520) {
-    document.getElementById("map").src = "img/Unimap_student.png";
-  } else if (scrollY >= 6042 && scrollY <= 7186) {
-    document.getElementById("map").src = "img/Unimap_prime.png";
-  } else if (scrollY >= 7318 && scrollY <= 8946) {
-    document.getElementById("map").src = "img/Unimap_sudeokho.png";
-  } else if (scrollY >= 9683 && scrollY <= 11134) {
-    document.getElementById("map").src = "img/Unimap_Surpport.png";
-  } else if (scrollY >= 11336) {
-    document.getElementById("map").src = "img/Unimap_Library.png";
+  if (scrollY >= locationY[0] && scrollY <= locationY[1]) {
+    mapLocation.src = "img/Unimap_bonboo.png";
+  } else if (scrollY >= locationY[1] && scrollY <= locationY[2]) {
+    mapLocation.src = "img/Unimap_student.png";
+  } else if (scrollY >= locationY[2] && scrollY <= locationY[3]) {
+    mapLocation.src = "img/Unimap_prime.png";
+  } else if (scrollY >= locationY[3] && scrollY <= locationY[4]) {
+    mapLocation.src = "img/Unimap_sudeokho.png";
+  } else if (scrollY >= locationY[4] && scrollY <= locationY[5]) {
+    mapLocation.src = "img/Unimap_Surpport.png";
+  } else if (scrollY >= locationY[5]) {
+    mapLocation.src = "img/Unimap_Library.png";
   } else {
-    document.getElementById("map").src = "img/Unimap.png";
+    mapLocation.src = "img/Unimap.png";
   }
-
-  // switch(scrollY){
-  //     case scrollY >= 2543 || scrollY <= 3775:
-  //         document.getElementById("map").src="Unimap_bonboo.png";
-  //         console.log("ㅎㅇ");
-  //     break;
-
-  //     case scrollY >= 4117 || scrollY <= 5520:
-
-  //     break;
-
-  //     case scrollY >= 6042 || scrollY <= 7186:
-
-  //     break;
-
-  //     case scrollY >= 7318 || scrollY <= 8946:
-
-  //     break;
-
-  //     case scrollY >= 9683 || scrollY <= 11134:
-
-  //     break;
-
-  //     case scrollY >= 11336 :
-
-  //     break;
-
-  //     default:
-  // }
-  // // console.log(scrollY);
 });

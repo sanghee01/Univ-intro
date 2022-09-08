@@ -35,8 +35,8 @@ const dialogList = {
       "-",
       "https://www.wku.ac.kr/about/institutions/offices.html",
     ],
-    img: "../img/대학본부.png",
-    npcImg: "../img/npc1.png",
+    img: "img/대학본부.png",
+    npcImg: "img/npc1.png",
   },
   1: {
     name: "인문대생",
@@ -49,8 +49,8 @@ const dialogList = {
       "-",
       "https://www.youtube.com/watch?v=UKAspu8Lz_k",
     ],
-    img: "../img/학생회관.png",
-    npcImg: "../img/npc2.png",
+    img: "img/학생회관.png",
+    npcImg: "img/npc2.png",
   },
   2: {
     name: "공대생",
@@ -63,8 +63,8 @@ const dialogList = {
       "-",
       "https://www.youtube.com/watch?v=F2b7d18Sl4Y",
     ],
-    img: "../img/프라임관.png",
-    npcImg: "../img/npc3.png",
+    img: "img/프라임관.png",
+    npcImg: "img/npc3.png",
   },
   3: {
     name: "자연대생",
@@ -77,8 +77,8 @@ const dialogList = {
       "-",
       "https://www.youtube.com/watch?v=2_j5GXY7624",
     ],
-    img: "../img/수덕호.png",
-    npcImg: "../img/npc4.png",
+    img: "img/수덕호.png",
+    npcImg: "img/npc4.png",
   },
   4: {
     name: "교수님",
@@ -91,8 +91,8 @@ const dialogList = {
       "-",
       "https://www.youtube.com/watch?v=ZqWBvbJJrbo",
     ],
-    img: "../img/학생지원관.png",
-    npcImg: "../img/npc5.png",
+    img: "img/학생지원관.png",
+    npcImg: "img/npc5.png",
   },
   5: {
     name: "의대생",
@@ -105,8 +105,8 @@ const dialogList = {
       "-",
       "https://elibrary.wku.ac.kr/lib/SlimaPlus.csp#link",
     ],
-    img: "../img/중앙도서관.png",
-    npcImg: "../img/npc6.png",
+    img: "img/중앙도서관.png",
+    npcImg: "img/npc6.png",
   },
 };
 
