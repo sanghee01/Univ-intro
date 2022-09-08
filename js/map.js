@@ -12,19 +12,17 @@ for (let npc of npcs) {
 addEventListener("scroll", () => {
   const scrollY = this.scrollY;
 
-  if (scrollY >= locationY[0] && scrollY <= locationY[1]) {
+  if (scrollY >= locationY[0] - 1000 && scrollY <= locationY[1] - 1000) {
     mapLocation.src = "./img/Unimap_bonboo.png";
-  } else if (scrollY >= locationY[1] && scrollY <= locationY[2]) {
+  } else if (scrollY >= locationY[1] - 1000 && scrollY <= locationY[2] - 1000) {
     mapLocation.src = "./img/Unimap_student.png";
-  } else if (scrollY >= locationY[2] && scrollY <= locationY[3]) {
+  } else if (scrollY >= locationY[2] - 1000 && scrollY <= locationY[3] - 1000) {
     mapLocation.src = "./img/Unimap_prime.png";
-  } else if (scrollY >= locationY[3] && scrollY <= locationY[4]) {
+  } else if (scrollY >= locationY[3] - 1000 && scrollY <= locationY[4] - 1000) {
     mapLocation.src = "./img/Unimap_sudeokho.png";
-  } else if (scrollY >= locationY[4] && scrollY <= locationY[5]) {
+  } else if (scrollY >= locationY[4] - 1000 && scrollY <= locationY[5] - 1000) {
     mapLocation.src = "./img/Unimap_Surpport.png";
-  } else if (scrollY >= locationY[5]) {
+  } else if (scrollY >= locationY[5] - 1000) {
     mapLocation.src = "./img/Unimap_Library.png";
-  } else {
-    mapLocation.src = "./img/Unimap.png";
   }
 });

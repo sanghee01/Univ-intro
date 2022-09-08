@@ -159,12 +159,11 @@ const nextTalk = () => {
 // 대화창 끔
 const closeTalk = () => {
   talk.classList.add("hidden");
-  cat[npcIndex].classList.add("hidden");
-  player.classList.remove("hidden");
   ground.classList.remove("hidden");
 };
 
-const clicklink = () => {
+ground.addEventListener("click", () => {
+  cat[npcIndex].classList.add("hidden");
+  player.classList.remove("hidden");
   ground.classList.add("hidden");
-};
-ground.addEventListener("click", clicklink);
+});
