@@ -6,7 +6,6 @@
 }
 #player {
   position: fixed;
-  display: none;
   align-items: center;
   top: 270px;
   z-index: 999;
@@ -77,9 +76,8 @@
 }
 #npc4 {
   top: 955%;
- left: 35%;
+  left: 35%;
   transform: scaleX(-1);
-
 }
 #npc5 {
   top: 1160%;
@@ -91,9 +89,9 @@
   transform: scaleX(-1);
   margin-bottom: 200px;
 }
-#stone{
+#stone {
   position: absolute;
-  top:1420%;
+  top: 1420%;
   width: 4px;
   height: 4px;
 }

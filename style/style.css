@@ -23,3 +23,11 @@ body {
   height: 1700%;
   width: 100vw;
 }
+
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}

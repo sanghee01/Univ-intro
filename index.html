@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="style/link.css" />
     <link rel="stylesheet" href="style/startscreen.css" />
   </head>
-  <body id="scroll">
-    <div id="upside">
+  <body>
+    <!-- header -->
+    <header id="upside" class="hidden">
       &nbsp;&nbsp;WKU
       <a
         id="instar"
@@ -36,8 +37,11 @@
         title="원광대 공식 페이스 북 이동"
         ><img src="img/FacebookIcon.png" id="icon"
       /></a>
+    </header>
+    <!-- 지도 -->
+    <div id="mapsurround">
+      <img src="./img/UniMap.png" id="map" class="hidden" />
     </div>
-    <div id="mapsurround"><img src="./img/UniMap.png" id="map" /></div>
     <div id="intro-page">
       <div id="box">
         <div>
@@ -53,17 +57,14 @@
       <button id="startbutton">원광대 탐방하기</button>
     </div>
     <div id="start_overlay"></div>
-
     <!-- player -->
-    <img src="img/player.gif" id="player" />
-    <!-- 대화 시 player 이동한 사진 -->
-
+    <img src="img/player.gif" id="player" class="hidden" />
+    <!-- audio -->
     <audio id="nyaong" src="audio/nyaong1.mp3"></audio>
-
-    <audio autoplay loop controls id="bgm">
+    <audio autoplay loop controls id="bgm" class="hidden">
       <source src="audio/Backgroundmusic.mp3" type="audio/mp3" />
     </audio>
-
+    <!-- 대화 시 player 이동한 사진 -->
     <img src="img/player.gif" id="player" />
     <img src="img/player.gif" class="cat hidden" id="player1" />
     <img src="img/player.gif" class="cat hidden" id="player2" />
@@ -121,19 +122,19 @@
         </div>
       </div>
     </section>
-    <div class="ground hidden">
+    <section class="ground hidden">
       <a class="groundheader" href="" target="_blank">
         <span class="textBox"> 더 자세히 알고싶다면 눌러봐! </span>
       </a>
       <div class="groundbody">아니야, 대화를 조금 더 해볼게.</div>
-    </div>
+    </section>
     <script src="js/player.js"></script>
     <script src="js/start.js"></script>
     <script src="js/map.js"></script>
   </body>
 </html>
 
-<!--출처
+<!--이미지 출처
     대학 본부 사진 : http://www.iksannews.com/default/index_view_page.php?part_idx=262&idx=53498
     학생회관 : http://sjbnews.com/news/print.php?code=li_news_2020&number=683597
     프라임관 : http://www.dailyjeonbuk.com/news/articleView.html?idxno=284097

@@ -5,24 +5,16 @@ const scrolling = document.getElementById("scroll");
 const map = document.getElementById("map");
 const player_image = document.getElementById("player");
 const upside = document.getElementById("upside");
+const backmusic = document.getElementById("bgm");
 
-const clickbutton = () => {
-  //없애기
-  box.style.display = "none";
-  startButton.style.display = "none";
-  start_overlay.style.display = "none";
-  const upside = document.getElementById("upside");
-  const backmusic = document.getElementById("bgm");
-
-  map.style.display = "block";
-  player_image.style.display = "block";
-  upside.style.display = "block";
-  backmusic.style.display = "block";
-  //스크롤바 보이게 하기
-  scrolling.style.overflow = "visible";
+startButton.addEventListener("click", () => {
+  box.classList.add("hidden");
+  startButton.classList.add("hidden");
+  start_overlay.classList.add("hidden");
+  map.classList.remove("hidden");
+  player_image.classList.remove("hidden");
+  upside.classList.remove("hidden");
+  backmusic.classList.remove("hidden");
   scrollTo({ left: 0, top: 1935, behavior: "smooth" });
-  //원하는위치까지 스크롤
   backmusic.play();
-};
-
-startButton.addEventListener("click", clickbutton);
+});
