@@ -19,6 +19,12 @@ body {
   background-size: 100%;
 }
 
+img,
+div {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
 #bg {
   height: 1700%;
   width: 100vw;
