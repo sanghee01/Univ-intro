@@ -2,8 +2,6 @@ const mapLocation = document.querySelector("#map");
 const npcs = document.querySelectorAll(".human");
 let npcLocation = 0;
 let locationY = [];
-const mapImage = [""];
-scrollTo(0, 0);
 
 for (let npc of npcs) {
   npcLocation = window.pageXOffset + npc.getBoundingClientRect().top;
