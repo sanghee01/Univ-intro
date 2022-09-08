@@ -4,11 +4,8 @@
 이런 점을 보완하고자 사람들의 '호기심'과 '흥미'를 유발하여 **보고 싶도록 만드는 학교 소개 서비스**를 만들게 되었다.
 
 <br>
-<br>
 
-## 서비스 주소
-
-https://wkuintro.netlify.app/
+👉 [서비스 링크](https://wkuintro.netlify.app/)
 
 <br>
 <br>
